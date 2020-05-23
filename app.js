@@ -4,6 +4,10 @@ const app = express();
 const data = require("./data");
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send("Olá, API funcionando. Teste os recursos disponiveis por meio da URL.");
+});
+
 app.get('/carros', (req, res) => {
     
     res.json(data.carros);
